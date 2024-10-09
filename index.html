@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bate-Papo UOL</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <img src="./images/logo.png" alt="Bate-Papo UOL" class="logo">
+    <button class="participants-button">
+      <img src="./images/people.png" alt="Participantes">
+    </button>
+  </header>
+
+  <div class="chat">
+    <!-- As mensagens serão adicionadas aqui dinamicamente -->
+  </div>
+
+  <div class="input-section">
+    <div class="recipient-info">Enviando para Todos (público)</div>
+    <div class="message-input-section">
+      <input type="text" class="message-input" placeholder="Escreva aqui...">
+      <button class="send-button">
+        <img src="./images/Vector.png" alt="Enviar">
+      </button>
+    </div>
+  </div>
+
+  <!-- Sidebar para escolher o destinatário e a visibilidade -->
+  <div class="sidebar">
+    <h2>Escolha um contato para enviar mensagem:</h2>
+    <div class="participants-list">
+      <!-- Participantes serão adicionados dinamicamente aqui -->
+    </div>
+
+    <h2>Escolha a visibilidade:</h2>
+    <div class="message-types">
+      <div class="visibility-option" data-type="message">
+        <ion-icon name="eye-outline"></ion-icon> 
+        <span>Público</span>
+        <ion-icon name="checkmark-outline" class="check hidden"></ion-icon>
+      </div>
+      <div class="visibility-option" data-type="private_message">
+        <ion-icon name="lock-closed-outline"></ion-icon> 
+        <span>Reservadamente</span>
+        <ion-icon name="checkmark-outline" class="check hidden"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- Overlay escuro para fechar o menu clicando fora dele -->
+  <div class="overlay"></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <!-- Ionicons para os ícones -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
